@@ -1,0 +1,18 @@
+.coffee-cup-container {
+
+    div,
+    button {
+        margin: 10px;
+    }
+
+    flex-box {
+        display: flex;
+
+        /* stack vertically */
+        flex-direction: column;
+    }
+
+    .cups {
+        height: 20em;
+    }
+}

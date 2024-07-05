@@ -16,6 +16,9 @@ export class CoffeeCupDisplayComponent {
   }
 
   increaseCount() {
+    if (this.count >= 10)
+      return;
+
     this.count++;
   }
 
