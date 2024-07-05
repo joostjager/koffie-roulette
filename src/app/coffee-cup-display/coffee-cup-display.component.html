@@ -1,3 +1,10 @@
 <div class="coffee-cup-container">
+    <div class="control-container">
+        <button (click)="decreaseCount()">Down</button>
+        <span>{{ count }}</span>
+        <button (click)="increaseCount()">Up</button>
+    </div>
+
+
     <div *ngFor="let cup of cups">Cup</div>
 </div>

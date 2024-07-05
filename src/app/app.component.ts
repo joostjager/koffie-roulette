@@ -12,16 +12,7 @@ import { CoffeeCupDisplayComponent } from './coffee-cup-display/coffee-cup-displ
 export class AppComponent {
   title = 'koffie-roulette';
 
-  coffeeCount: number = 0;
-
-  increaseCount() {
-    this.coffeeCount++;
-  }
-
-  decreaseCount() {
-    if (this.coffeeCount > 0) {
-      this.coffeeCount--;
-    }
-  }
+  capuCount: number = 0;
+  coffCount: number = 0;
 }
 

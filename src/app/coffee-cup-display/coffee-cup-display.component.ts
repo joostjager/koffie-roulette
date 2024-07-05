@@ -14,4 +14,14 @@ export class CoffeeCupDisplayComponent {
   get cups() {
     return new Array(this.count);
   }
+
+  increaseCount() {
+    this.count++;
+  }
+
+  decreaseCount() {
+    if (this.count > 0) {
+      this.count--;
+    }
+  }
 }

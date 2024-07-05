@@ -1,9 +1,8 @@
 <div>
-  <div class="control-container">
-    <button (click)="decreaseCount()">Down</button>
-    <span>{{ coffeeCount }}</span>
-    <button (click)="increaseCount()">Up</button>
+
+  <div class="coffee-cup-type-container">
+    <app-coffee-cup-display [count]="capuCount"></app-coffee-cup-display>
+    <app-coffee-cup-display [count]="coffCount"></app-coffee-cup-display>
   </div>
 
-  <app-coffee-cup-display [count]="coffeeCount"></app-coffee-cup-display>
 </div>
