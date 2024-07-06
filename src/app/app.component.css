@@ -3,7 +3,24 @@
 
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+}
 
+.app {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 100%;
+    padding: 1em;
+}
+
+.outer {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100vh;
+    /* Full viewport height, adjust as needed */
+    width: 100vw;
+    /* Full viewport width, adjust as needed */
 }

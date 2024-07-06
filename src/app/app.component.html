@@ -1,10 +1,14 @@
-<div>
+<div class="outer">
+  <div class="app">
 
-  <div class="coffee-cup-type-container">
-    <app-coffee-cup-display (countChanged)="onCapuCountChanged($event)" [startChance]=1 [endChance]="capuEndChance"
-      type="capucchino"></app-coffee-cup-display>
-    <app-coffee-cup-display (countChanged)="onCoffCountChanged($event)" [startChance]="capuEndChance+1" [endChance]=100
-      type="coffee"></app-coffee-cup-display>
+    <div class="coffee-cup-type-container">
+      <app-coffee-cup-display (countChanged)="onCapuCountChanged($event)" [startChance]=1 [endChance]="capuEndChance"
+        type="capucchino" [price]="capuPrice" [randomNumber]="randomNumber"></app-coffee-cup-display>
+      <app-coffee-cup-display (countChanged)="onCoffCountChanged($event)" [startChance]="capuEndChance+1"
+        [endChance]=100 type="coffee" [price]="coffPrice" [randomNumber]="randomNumber"></app-coffee-cup-display>
+    </div>
+
+    <button (click)="random()">Random</button>
+    <div style="font-size:400%;color:red;text-align: center;">{{ randomNumber }}</div>
   </div>
-
 </div>

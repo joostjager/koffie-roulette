@@ -19,6 +19,7 @@ export class AppComponent {
   coffPrice: number = 1.25;
 
   capuEndChance: number = 5;
+  randomNumber: number = 0;
 
   onCapuCountChanged(newValue: number) {
     this.capuCount = newValue;
@@ -36,6 +37,10 @@ export class AppComponent {
     var totalPrice = this.capuCount * this.capuPrice + this.coffCount * this.coffPrice;
 
     this.capuEndChance = Math.round(100 * this.capuCount * this.capuPrice / totalPrice);
+  }
+
+  random(): void {
+    this.randomNumber = Math.floor(Math.random() * 100) + 1;
   }
 }
 

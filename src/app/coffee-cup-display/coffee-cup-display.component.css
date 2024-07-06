@@ -1,6 +1,13 @@
 .coffee-cup-container {
 
-    div,
+    .cup {
+        margin: 10px;
+
+        div {
+            margin: 10px;
+        }
+    }
+
     button {
         margin: 10px;
     }
@@ -12,7 +19,10 @@
         flex-direction: column;
     }
 
-    .cups {
-        height: 30em;
-    }
+}
+
+button {
+    font-size: 200%;
+    padding-left: 1em;
+    padding-right: 1em;
 }

@@ -14,6 +14,9 @@ export class CoffeeCupDisplayComponent {
   @Input() endChance: number = 0;
 
   @Input() type: string = '';
+  @Input() randomNumber: number = 0;
+
+  @Input() price: number = 0;
 
   @Output() countChanged: EventEmitter<number> = new EventEmitter<number>();
 
@@ -25,7 +28,8 @@ export class CoffeeCupDisplayComponent {
       cupsArray.push({
         idx: i,
         start: start,
-        end: end
+        end: end,
+        color: this.randomNumber >= start && this.randomNumber <= end ? "red" : "black"
       });
 
       start = end + 1;
