@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CoffeeCupDisplayComponent } from './coffee-cup-display/coffee-cup-display.component';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CoffeeCupDisplayComponent],
+  imports: [RouterOutlet, CoffeeCupDisplayComponent, NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
