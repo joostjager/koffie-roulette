@@ -1,7 +1,7 @@
 .coffee-cup-container {
+    width: 11em;
 
     .cup {
-        margin: 10px;
 
         div {
             margin: 10px;
@@ -9,7 +9,7 @@
     }
 
     button {
-        margin: 10px;
+        margin: 5px;
     }
 
     flex-box {
@@ -22,7 +22,13 @@
 }
 
 button {
-    font-size: 200%;
+
+    font-size: 150%;
     padding-left: 1em;
     padding-right: 1em;
+}
+
+.winner {
+    color: red;
+    background-color: #ffe0e0;
 }

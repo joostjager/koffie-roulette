@@ -8,7 +8,7 @@
         [endChance]=100 type="coffee" [price]="coffPrice" [randomNumber]="randomNumber"></app-coffee-cup-display>
     </div>
 
-    <button (click)="random()" *ngIf="randomNumber === 0">Random</button>
+    <button (click)="random()" [disabled]="randomNumber > 0">Roll the dice</button>
     <div *ngIf="randomNumber > 0" style="font-size:400%;color:red;text-align: center;">{{ randomNumber }}</div>
   </div>
 </div>

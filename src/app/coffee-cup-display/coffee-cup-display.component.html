@@ -2,12 +2,12 @@
     <div style="font-size:150%;">{{type}}</div>
     <div>&euro; {{price | number:'1.2-2' }}</div>
     <div style=" display:flex; flex-direction: row;">
-        <button *ngIf="randomNumber == 0" (click)="decreaseCount()">-</button>
-        <button *ngIf="randomNumber == 0" (click)=" increaseCount()">+</button>
+        <button [disabled]="randomNumber > 0" (click)="decreaseCount()">-</button>
+        <button [disabled]="randomNumber > 0" (click)=" increaseCount()">+</button>
     </div>
     <div class="cups">
         <div *ngFor="let cup of cups" class="cup"
-            style="display: flex; flex-direction: row; align-items: center; padding:0px;" [style.color]="cup.color">
+            style="display: flex; flex-direction: row; align-items: center; padding:0px;" [ngClass]="cup.class">
             <div style="font-size: 200%;">{{cup.idx + 1}}</div>
             <div style="display: flex; flex-direction: column; justify-content: center;">
                 <div style="margin:0px;">{{cup.start}}</div>

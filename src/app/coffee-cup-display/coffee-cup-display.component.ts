@@ -29,7 +29,7 @@ export class CoffeeCupDisplayComponent {
         idx: i,
         start: start,
         end: end,
-        color: this.randomNumber >= start && this.randomNumber <= end ? "red" : "black"
+        class: this.randomNumber >= start && this.randomNumber <= end ? "winner" : ""
       });
 
       start = end + 1;
