@@ -10,12 +10,27 @@ import { NgFor, CommonModule } from '@angular/common';
 })
 export class CoffeeCupDisplayComponent {
   @Input() count: number = 0;
-  @Input() chance: number = 0;
+  @Input() startChance: number = 0;
+  @Input() endChance: number = 0;
+
+  @Input() type: string = '';
 
   @Output() countChanged: EventEmitter<number> = new EventEmitter<number>();
 
   get cups() {
-    return new Array(this.count);
+    let cupsArray = [];
+    var start = this.startChance;
+    for (let i = 0; i < this.count; i++) {
+      let end = Math.round(this.endChance - (this.count - 1 - i) * (this.endChance - this.startChance + 1) / this.count);
+      cupsArray.push({
+        idx: i,
+        start: start,
+        end: end
+      });
+
+      start = end + 1;
+    }
+    return cupsArray;
   }
 
   increaseCount() {

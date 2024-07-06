@@ -1,9 +1,16 @@
-<div class="coffee-cup-container">
+<div class="coffee-cup-container" style="display: flex; flex-direction: column;">
+    <div>{{type}}</div>
     <button (click)="decreaseCount()">Less</button>
     <div class="cups">
-        <div *ngFor="let cup of cups; let i = index">{{i + 1}} ({{ chance | number:'1.2-2' }})</div>
+        <div *ngFor="let cup of cups" style="display: flex; flex-direction: row; align-items: center; padding:0px;">
+            <div style="font-size: 200%;">{{cup.idx + 1}}</div>
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+                <div style="margin:0px;">{{cup.start}}</div>
+                <div style="margin:0px;">{{cup.end}}</div>
+            </div>
+        </div>
     </div>
 
-    <button (click)="increaseCount()">More</button>
+    <button (click)=" increaseCount()">More</button>
 
 </div>
