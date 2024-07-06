@@ -1,7 +1,7 @@
 <div class="coffee-cup-container">
     <button (click)="decreaseCount()">Less</button>
     <div class="cups">
-        <div *ngFor="let cup of cups; let i = index">{{i + 1}}</div>
+        <div *ngFor="let cup of cups; let i = index">{{i + 1}} ({{ chance | number:'1.2-2' }})</div>
     </div>
 
     <button (click)="increaseCount()">More</button>

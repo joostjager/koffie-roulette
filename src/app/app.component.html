@@ -1,8 +1,8 @@
 <div>
 
   <div class="coffee-cup-type-container">
-    <app-coffee-cup-display [count]="capuCount"></app-coffee-cup-display>
-    <app-coffee-cup-display [count]="coffCount"></app-coffee-cup-display>
+    <app-coffee-cup-display (countChanged)="onCapuCountChanged($event)" [chance]="capuChance"></app-coffee-cup-display>
+    <app-coffee-cup-display (countChanged)="onCoffCountChanged($event)" [chance]="coffChance"></app-coffee-cup-display>
   </div>
 
 </div>
