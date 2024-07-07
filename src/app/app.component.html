@@ -9,6 +9,7 @@
     </div>
 
     <button (click)="random()" [disabled]="randomNumber > 0">Roll the dice</button>
-    <div *ngIf="randomNumber > 0" style="font-size:400%;color:red;text-align: center;">{{ randomNumber }}</div>
+    <div *ngIf="randomNumber > 0" style="font-size:400%;color:red;text-align: center;"
+      [ngClass]="{ 'final': isRandomNumberFinal }">{{ randomNumber }}</div>
   </div>
 </div>
