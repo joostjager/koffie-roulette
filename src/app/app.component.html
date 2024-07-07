@@ -1,14 +1,15 @@
 <div class="outer">
   <div class="app">
+    <div style="font-size:140%;margin-bottom:0.5em;font-weight: bold;"><u>TENNET KOFFIE ROULETTE</u></div>
 
     <div class="coffee-cup-type-container">
       <app-coffee-cup-display (countChanged)="onCapuCountChanged($event)" [startChance]=1 [endChance]="capuEndChance"
         type="capucchino" [price]="capuPrice" [randomNumber]="randomNumber"></app-coffee-cup-display>
       <app-coffee-cup-display (countChanged)="onCoffCountChanged($event)" [startChance]="capuEndChance+1"
-        [endChance]=100 type="coffee" [price]="coffPrice" [randomNumber]="randomNumber"></app-coffee-cup-display>
+        [endChance]=100 type="koffie" [price]="coffPrice" [randomNumber]="randomNumber"></app-coffee-cup-display>
     </div>
 
-    <button (click)="random()" [disabled]="randomNumber > 0">Roll the dice</button>
+    <button (click)="random()" [disabled]="randomNumber > 0">Spin the wheel!</button>
     <div *ngIf="randomNumber > 0" style="font-size:400%;color:red;text-align: center;"
       [ngClass]="{ 'final': isRandomNumberFinal }">{{ randomNumber }}</div>
   </div>
