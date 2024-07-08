@@ -16,7 +16,7 @@ export class AppComponent {
   capuCount: number = 0;
   coffCount: number = 0;
 
-  capuPrice: number = 1.9;
+  capuPrice: number = 1.55;
   coffPrice: number = 1.25;
 
   capuEndChance: number = 5;
